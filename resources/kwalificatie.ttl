@@ -23,22 +23,22 @@
     skos:prefLabel "Zwembad aanleggen" ;
     skos:inScheme <https://data.vlaanderen.be/doc/conceptscheme/omgevingsvergunning/Rechtsfeit> ;
     skos:broader <https://data.vlaanderen.be/doc/conceptscheme/omgevingsvergunning/AanbouwPlaatsen> ;
-    skos:relatedMatch <https://data.vlaanderen.be/doc/concept/omgevingsvergunning/GereguleerdeActiviteit/NietOverdekteConstructies> .
+    skos:relatedMatch <https://data.vlaanderen.be/doc/concept/omgevingsvergunning/JuridischeCategorie/NietOverdekteConstructies> .
 
-<https://data.vlaanderen.be/doc/conceptscheme/omgevingsvergunning/GereguleerdeActiviteit> a skos:ConceptScheme .
+<https://data.vlaanderen.be/doc/conceptscheme/omgevingsvergunning/JuridischeCategorie> a skos:ConceptScheme .
 
-<https://data.vlaanderen.be/doc/concept/omgevingsvergunning/GereguleerdeActiviteit/StedenbouwkundigeHandeling> a skos:Concept ;
+<https://data.vlaanderen.be/doc/concept/omgevingsvergunning/JuridischeCategorie/StedenbouwkundigeHandeling> a skos:Concept ;
     skos:prefLabel "Stedenbouwkundige handeling" ;
-    skos:inScheme <https://data.vlaanderen.be/doc/conceptscheme/omgevingsvergunning/GereguleerdeActiviteit> .
+    skos:inScheme <https://data.vlaanderen.be/doc/conceptscheme/omgevingsvergunning/JuridischeCategorie> .
 
-<https://data.vlaanderen.be/doc/concept/omgevingsvergunning/GereguleerdeActiviteit/VrijgesteldeHandeling> a skos:Concept ;
+<https://data.vlaanderen.be/doc/concept/omgevingsvergunning/JuridischeCategorie/VrijgesteldeHandeling> a skos:Concept ;
     skos:prefLabel "Handelingen waarvoor geen stedenbouwkundige vergunning nodig is" ;
-    skos:inScheme <https://data.vlaanderen.be/doc/conceptscheme/omgevingsvergunning/GereguleerdeActiviteit> ;
-    skos:broader <https://data.vlaanderen.be/doc/concept/omgevingsvergunning/GereguleerdeActiviteit/StedenbouwkundigeHandeling> .
+    skos:inScheme <https://data.vlaanderen.be/doc/conceptscheme/omgevingsvergunning/JuridischeCategorie> ;
+    skos:broader <https://data.vlaanderen.be/doc/concept/omgevingsvergunning/JuridischeCategorie/StedenbouwkundigeHandeling> .
 
-<https://data.vlaanderen.be/doc/concept/omgevingsvergunning/GereguleerdeActiviteit/NietOverdekteConstructies> a skos:Concept ;
+<https://data.vlaanderen.be/doc/concept/omgevingsvergunning/JuridischeCategorie/NietOverdekteConstructies> a skos:Concept ;
     skos:prefLabel "Niet-overdekte constructies in zijtuin en achtertuin" ;
-    skos:inScheme <https://data.vlaanderen.be/doc/conceptscheme/omgevingsvergunning/GereguleerdeActiviteit> ;
-    skos:broader <https://data.vlaanderen.be/doc/concept/omgevingsvergunning/GereguleerdeActiviteit/VrijgesteldeHandeling> .
+    skos:inScheme <https://data.vlaanderen.be/doc/conceptscheme/omgevingsvergunning/JuridischeCategorie> ;
+    skos:broader <https://data.vlaanderen.be/doc/concept/omgevingsvergunning/JuridischeCategorie/VrijgesteldeHandeling> .
 
 New codelist - BesluitType
