@@ -1,4 +1,4 @@
 .idea/
 .vscode/
 *.ldb
-*.xlsm
+~$*.xls*

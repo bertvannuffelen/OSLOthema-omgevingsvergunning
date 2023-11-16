@@ -3,7 +3,7 @@
     "name": "OSLO-Omgevingsvergunning-ap",
     "type": "ap",
     "eap": "OSLO-Omgevingsvergunning.eap",
-    "diagram": "OSLO-Omgevingsvergunning-002",
+    "diagram": "OSLO-Omgevingsvergunning-master",
     "template": "OSLO-Omgevingsvergunning-ap.j2",
     "title": "Omgevingsvergunning - Applicatieprofiel",
     "publication-state": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
