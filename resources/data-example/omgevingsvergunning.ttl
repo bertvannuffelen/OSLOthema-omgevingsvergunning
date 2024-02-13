@@ -1,0 +1,175 @@
+@prefix adms: <http://www.w3.org/ns/adms#> .
+@prefix adres: <https://data.vlaanderen.be/ns/adres#> .
+@prefix cpsv: <http://purl.org/vocab/cpsv#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix eu: <http://data.europa.eu/m8g/> .
+@prefix generiek: <https://data.vlaanderen.be/ns/generiek#> .
+@prefix omgevingsvergunning: <https://data.vlaanderen.be/ns/omgevingsvergunning#> .
+@prefix organisatie: <https://data.vlaanderen.be/ns/organisatie#> .
+@prefix perceel: <https://data.vlaanderen.be/ns/perceel#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# <https://data.vlaanderen.be/id/omv/ver/1> a omgevingsvergunning:VergundeToestand ;
+#    omgevingsvergunning:tijdstempel "2018-04-09T10:00:00"^^xsd:dateTime ;
+#    omgevingsvergunning:recht (<https://data.vlaanderen.be/id/omv/rec/1>) .
+
+# <https://data.vlaanderen.be/id/omv/rechtsgevolg/1> a omgevingsvergunning:Rechtsgevolg ;
+#     omgevingsvergunning:bepaling <https://data.vlaanderen.be/id/omv/zaakuitkomst/1> . 
+
+# <https://data.vlaanderen.be/id/omv/zaakuitkomst/1> a omgevingsvergunning:ZaakUitkomst ;
+#     dcterms:type <https://data.vlaanderen.be/id/concept/UitkomstType/Toekenning> .
+
+# Aanvraag
+
+<https://data.vlaanderen.be/id/omv/aan/1> a omgevingsvergunning:Aanvraag ;
+    omgevingsvergunning:inhoud <https://data.vlaanderen.be/id/omv/bep/1> .
+
+<https://data.vlaanderen.be/id/omv/bep/1> a omgevingsvergunning:Bepaling ;
+    omgevingsvergunning:rechtsverhouding <https://data.vlaanderen.be/id/omv/recht/1> .
+
+<https://data.vlaanderen.be/id/omv/recht/1> a omgevingsvergunning:Recht ;
+    omgevingsvergunning:activiteit <https://data.vlaanderen.be/id/omv/act/1> .
+
+<https://data.vlaanderen.be/id/omv/act/1> a omgevingsvergunning:Activiteit ;
+    generiek:locatie <https://data.vlaanderen.be/id/adres/3055609>, <https://data.vlaanderen.be/id/kadpla/71328D0168/00L000>, <https://data.vlaanderen.be/id/kadpla/71328D0166/00A002>, <https://data.vlaanderen.be/id/kadpla/71328D0148/00F00> , <https://data.vlaanderen.be/id/kadpla/71328D0266/00H00> ;
+    omgevingsvergunning:juridischeKwalificatie <https://data.vlaanderen.be/id/omv/jurcatver/1>, <https://data.vlaanderen.be/id/omv/jurcatver/2> , <https://data.vlaanderen.be/id/omv/jurcatver/3> .
+
+<https://data.vlaanderen.be/id/adres/3055609> a adres:Adres .
+
+<https://data.vlaanderen.be/id/kadpla/71328D0168/00L000> a perceel:KadastraalPlanperceel .
+    
+<https://data.vlaanderen.be/id/kadpla/71328D0166/00A002> a perceel:KadastraalPlanperceel .
+
+<https://data.vlaanderen.be/id/kadpla/71328D0148/00F00> a perceel:KadastraalPlanperceel .
+
+<https://data.vlaanderen.be/id/kadpla/71328D0266/00H00> a perceel:KadastraalPlanperceel .
+
+<https://data.vlaanderen.be/id/omv/jurcatver/1> a omgevingsvergunning:JuridischeCategorieVerwijzing ;
+    dcterms:type <https://data.vlaanderen.be/id/concept/JuridischeVerwijzingType/Kwalificatie> ;
+    omgevingsvergunning:juridischeCategorie <https://data.vlaanderen.be/id/concept/JuridischeCategorie/Aanpassingswerken> .
+
+<https://data.vlaanderen.be/id/omv/jurcatver/2> a omgevingsvergunning:JuridischeCategorieVerwijzing ;
+    dcterms:type <https://data.vlaanderen.be/id/concept/JuridischeVerwijzingType/Kwalificatie> ;
+    omgevingsvergunning:juridischeCategorie <https://data.vlaanderen.be/id/concept/JuridischeCategorie/BijkomendeVerharding> .
+
+<https://data.vlaanderen.be/id/omv/jurcatver/3> a omgevingsvergunning:JuridischeCategorieVerwijzing ;
+    dcterms:type <https://data.vlaanderen.be/id/concept/JuridischeVerwijzingType/Kwalificatie> ;
+    omgevingsvergunning:juridischeCategorie <https://data.vlaanderen.be/id/concept/JuridischeCategorie/RooienVegetatie> .
+
+# Omgevingsvergunning eerste aanleg
+
+<https://data.vlaanderen.be/id/omv/zaak/1> a omgevingsvergunning:Zaak ;
+    omgevingsvergunning:procedure <https://data.vlaanderen.be/id/omv/pro/1> .
+
+<https://data.vlaanderen.be/id/omv/pro/1> a omgevingsvergunning:Procedure;
+    dcterms:type <https://data.vlaanderen.be/id/concept/JuridischeCategorie/EersteAdministratieveAanleg>, <https://data.vlaanderen.be/id/concept/JuridischeCategorie/EengemaakteOmgevingsvergunningsprocedure> ;
+    omgevingsvergunning:rechtsmiddel <https://data.vlaanderen.be/id/omv/rechtsmiddel/1> .
+
+<https://data.vlaanderen.be/id/omv/eenbestrec/1> a omgevingsvergunning:EenzijdigeBestuurlijkeRechtshandeling ;
+    omgevingsvergunning:identificator <https://data.vlaanderen.be/id/generiek/identificator/1> ;
+    omgevingsvergunning:auteur <https://data.vlaanderen.be/id/org/puborg/1> ;
+    omgevingsvergunning:uitwerkingTijdstip "2018-08-01"^^xsd:date ;
+    omgevingsvergunning:publicatie <https://data.vlaanderen.be/id/omv/pub/1> ;
+    omgevingsvergunning:inhoud <https://data.vlaanderen.be/id/omv/bep/2> ;
+    omgevingsvergunning:zaak <https://data.vlaanderen.be/id/omv/zaak/1> .
+
+<https://data.vlaanderen.be/id/generiek/identificator/1> a adms:Identifier ;
+    skos:notation "2018N034335" .
+
+<https://data.vlaanderen.be/id/org/puborg/1> a eu:PublicOrganisation ;
+    skos:prefLabel "Deputatie Provincie Limburg" .
+    
+
+<https://data.vlaanderen.be/id/omv/pub/1> a omgevingsvergunning:Publicatie ;
+    dcterms:type <https://data.vlaanderen.be/id/concept/PublicatieType/Aanplakking> ;
+    omgevingsvergunning:publicatieTijdstip "2018-08-22"^^xsd:date .
+
+<https://data.vlaanderen.be/id/omv/bep/2> a omgevingsvergunning:Bepaling ;
+    omgevingsvergunning:RechtshandelingVerwijzing <https://data.vlaanderen.be/id/omv/recver/1> .
+
+<https://data.vlaanderen.be/id/omv/recver/1> a omgevingsvergunning:RechtshandelingVerwijzing ;
+    dcterms:type <https://data.vlaanderen.be/id/concept/JuridischeVerwijzingType/Toekenning> ;
+    omgevingsvergunning:rechtshandeling <https://data.vlaanderen.be/id/omv/aan/1> .
+
+# Vergunde toestand T1 - 1 dag na aanplakking
+<https://data.vlaanderen.be/id/omv/vasvertoe/1> a omgevingsvergunning:VaststellingVergundeToestand ;
+    generiek:locatie <https://data.vlaanderen.be/id/adres/3055609> ;
+    omgevingsvergunning:vaststellingTijdstip "2018-08-23T00:00:00"^^xsd:dateTime ;
+    omgevingsvergunning:vergundeToestand <https://data.vlaanderen.be/id/omv/vertoe/1> .
+
+<https://data.vlaanderen.be/id/omv/vertoe/1> a omgevingsvergunning:VergundeToestand ;
+    omgevingsvergunning:rechtsverhoudingVerwijzing <https://data.vlaanderen.be/id/omv/recverver/1> .
+
+<https://data.vlaanderen.be/id/omv/recverver/1> a omgevingsvergunning:RechtsverhoudingVerwijzing ;
+    dcterms:type <https://data.vlaanderen.be/id/concept/JuridischeVerwijzingType/NietUitvoerbaar> ;
+    omgevingsvergunning:rechtsverhouding <https://data.vlaanderen.be/id/omv/recht/1> .
+ 
+# Beroep
+<https://data.vlaanderen.be/id/omv/aanrec/1> a omgevingsvergunning:AanwendingRechtsmiddel ;
+    omgevingsvergunning:ontvangstTijdstip "2018-09-21"^^xsd:date ; 
+    omgevingsvergunning:rechtsmiddel <https://data.vlaanderen.be/id/omv/rechtsmiddel/1> ;
+    omgevingsvergunning:bestredenBeslissing <https://data.vlaanderen.be/id/omv/eenbestrec/1> .
+
+<https://data.vlaanderen.be/id/omv/rechtsmiddel/1> a omgevingsvergunning:Rechtsmiddel ;
+    dcterms:type <https://data.vlaanderen.be/id/concept/JuridischeCategorie/AdministratiefBeroep>, <https://data.vlaanderen.be/id/concept/JuridischeCategorie/Schorsend> ;
+    omgevingsvergunning:bevoegdeOverheid <https://data.vlaanderen.be/id/org/puborg/2> .
+
+<https://data.vlaanderen.be/id/org/puborg/2> a eu:PublicOrganisation ;
+    skos:prefLabel "Vlaamse Regering"@nl .
+
+# Vergunde toestand T2 - na aanwending rechtsmiddel
+<https://data.vlaanderen.be/id/omv/vasvertoe/1> a omgevingsvergunning:VaststellingVergundeToestand ;
+    generiek:locatie <https://data.vlaanderen.be/id/adres/3055609> ;
+    omgevingsvergunning:vaststellingTijdstip "2018-09-22T00:00:00"^^xsd:dateTime ;
+    omgevingsvergunning:vergundeToestand <https://data.vlaanderen.be/id/omv/vertoe/2> .
+
+<https://data.vlaanderen.be/id/omv/vertoe/2> a omgevingsvergunning:VergundeToestand ;
+    omgevingsvergunning:rechtsverhoudingVerwijzing <https://data.vlaanderen.be/id/omv/recverver/2> .
+
+<https://data.vlaanderen.be/id/omv/recverver/2> a omgevingsvergunning:RechtsverhoudingVerwijzing ;
+    dcterms:type <https://data.vlaanderen.be/id/concept/JuridischeVerwijzingType/Geschorst> ;
+    omgevingsvergunning:rechtsverhouding <https://data.vlaanderen.be/id/omv/recht/1> .
+
+# Beslissing in beroep
+<https://data.vlaanderen.be/id/omv/eenbestrec/2> a omgevingsvergunning:EenzijdigeBestuurlijkeRechtshandeling ;
+    omgevingsvergunning:auteur <https://data.vlaanderen.be/id/org/puborg/2> ;
+    omgevingsvergunning:uitwerkingTijdstip "2019-02-15"^^xsd:date ;
+    omgevingsvergunning:inhoud <https://data.vlaanderen.be/id/omv/bep/3> .
+
+<https://data.vlaanderen.be/id/omv/bep/3> a omgevingsvergunning:Bepaling ;
+    omgevingsvergunning:RechtshandelingVerwijzing <https://data.vlaanderen.be/id/omv/rechanver/2> .
+
+<https://data.vlaanderen.be/id/omv/rechanver/2> a omgevingsvergunning:RechtshandelingVerwijzing ;
+    dcterms:type <https://data.vlaanderen.be/id/concept/JuridischeVerwijzingType/Gegrond> ;
+    omgevingsvergunning:rechtshandeling <https://data.vlaanderen.be/id/omv/aanrec/1> .
+
+# Vergunde toestand T3 - na beslissing in beroep
+<https://data.vlaanderen.be/id/omv/vasvertoe/1> a omgevingsvergunning:VaststellingVergundeToestand ;
+    generiek:locatie <https://data.vlaanderen.be/id/adres/3055609> ;
+    omgevingsvergunning:vaststellingTijdstip "2018-09-22T00:00:00"^^xsd:dateTime ;
+    omgevingsvergunning:vergundeToestand <https://data.vlaanderen.be/id/omv/vertoe/2> .
+
+<https://data.vlaanderen.be/id/omv/vertoe/2> a omgevingsvergunning:VergundeToestand ;
+    omgevingsvergunning:rechtsverhoudingVerwijzing <https://data.vlaanderen.be/id/omv/recverver/2> .
+
+<https://data.vlaanderen.be/id/omv/recverver/2> a omgevingsvergunning:RechtsverhoudingVerwijzing ;
+    dcterms:type <https://data.vlaanderen.be/id/concept/JuridischeVerwijzingType/Vernietigd> ;
+    omgevingsvergunning:rechtsverhouding <https://data.vlaanderen.be/id/omv/recht/1> .
+
+# Vaststelling
+
+
+
+
+
+
+
+
+
+
+
+
+

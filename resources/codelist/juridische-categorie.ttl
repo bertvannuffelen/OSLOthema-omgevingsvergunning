@@ -1,0 +1,33 @@
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<https://data.vlaanderen.be/id/conceptscheme/JuridischeCategorie>
+   a skos:ConceptScheme ;
+   skos:definition "Typologie van de mogelijke juridische categorieën."@nl .
+
+<https://data.vlaanderen.be/id/concept/JuridischeCategorie/StedenbouwkundigeHandeling>
+   a skos:Concept ;
+   skos:prefLabel "Stedenbouwkundige handeling"@nl ;
+   skos:inScheme <https://data.vlaanderen.be/id/conceptscheme/JuridischeCategorie> .
+
+<https://data.vlaanderen.be/id/concept/JuridischeCategorie/Aanpassingswerken>
+   a skos:Concept ;
+   skos:prefLabel "Aanpassingswerken"@nl ;
+   skos:definition "Het afbreken, herbouwen, verbouwen en uitbreiden van een constructie."@nl ;
+   skos:inScheme <https://data.vlaanderen.be/id/conceptscheme/JuridischeCategorie> ;
+   skos:broader <https://data.vlaanderen.be/id/concept/JuridischeCategorie/StedenbouwkundigeHandeling> .
+
+<https://data.vlaanderen.be/id/concept/JuridischeCategorie/BijkomendeVerharding>
+   a skos:Concept ;
+   skos:prefLabel "Bijkomende verharding"@nl ;
+   skos:definition "Verharding en gebouwen zijn artificiële bedekkingen van de bodem waardoor essentiële ecosysteemfuncties verloren gaan, denk maar aan woningen en wegen."@nl ;
+   skos:inScheme <https://data.vlaanderen.be/id/conceptscheme/JuridischeCategorie> ;
+   skos:broader <https://data.vlaanderen.be/id/concept/JuridischeCategorie/StedenbouwkundigeHandeling> .
+
+<https://data.vlaanderen.be/id/concept/JuridischeCategorie/RooienVegetatie>
+   a skos:Concept ;
+   skos:prefLabel "Rooien van vegetatie"@nl ;
+   skos:definition "Het rooien van bomen verwijst naar het proces van het verwijderen van bomen uit hun oorspronkelijke locatie, meestal door ze om te hakken, uit te graven of op een andere manier te verwijderen."@nl ;
+   skos:inScheme <https://data.vlaanderen.be/id/conceptscheme/JuridischeCategorie> ;
+   skos:broader <https://data.vlaanderen.be/id/concept/JuridischeCategorie/StedenbouwkundigeHandeling> .
