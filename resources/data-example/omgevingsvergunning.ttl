@@ -7,25 +7,25 @@
 @prefix omgevingsvergunning: <https://data.vlaanderen.be/ns/omgevingsvergunning#> .
 @prefix organisatie: <https://data.vlaanderen.be/ns/organisatie#> .
 @prefix perceel: <https://data.vlaanderen.be/ns/perceel#> .
+@prefix persoon: <https://data.vlaanderen.be/ns/persoon#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix regorg: <http://www.w3.org/ns/regorg#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-# <https://data.vlaanderen.be/id/omv/ver/1> a omgevingsvergunning:VergundeToestand ;
-#    omgevingsvergunning:tijdstempel "2018-04-09T10:00:00"^^xsd:dateTime ;
-#    omgevingsvergunning:recht (<https://data.vlaanderen.be/id/omv/rec/1>) .
-
-# <https://data.vlaanderen.be/id/omv/rechtsgevolg/1> a omgevingsvergunning:Rechtsgevolg ;
-#     omgevingsvergunning:bepaling <https://data.vlaanderen.be/id/omv/zaakuitkomst/1> . 
-
-# <https://data.vlaanderen.be/id/omv/zaakuitkomst/1> a omgevingsvergunning:ZaakUitkomst ;
-#     dcterms:type <https://data.vlaanderen.be/id/concept/UitkomstType/Toekenning> .
 
 # Aanvraag
 
 <https://data.vlaanderen.be/id/omv/aan/1> a omgevingsvergunning:Aanvraag ;
+    omgevingsvergunning:aanvrager <https://data.vlaanderen.be/id/org/regorg/1> ;
     omgevingsvergunning:inhoud <https://data.vlaanderen.be/id/omv/bep/1> .
+
+<https://data.vlaanderen.be/id/org/regorg/1> a regorg:RegisteredOrganization ;
+    adms:identificator <https://data.vlaanderen.be/id/generiek/identificator/1> .
+
+<https://data.vlaanderen.be/id/generiek/identificator/1> a adms:Identifier ;
+    skos:notation "0460.660.720"^^<https://data.vlaanderen.be/id/concept/IdentificatorSchema/KBOnummer> .
 
 <https://data.vlaanderen.be/id/omv/bep/1> a omgevingsvergunning:Bepaling ;
     omgevingsvergunning:rechtsverhouding <https://data.vlaanderen.be/id/omv/recht/1> .
@@ -70,20 +70,29 @@
 
 <https://data.vlaanderen.be/id/omv/eenbestrec/1> a omgevingsvergunning:EenzijdigeBestuurlijkeRechtshandeling ;
     omgevingsvergunning:identificator <https://data.vlaanderen.be/id/generiek/identificator/1> ;
+    dcterms:type <https://data.vlaanderen.be/id/concept/JuridischeCategorie/UitdrukkelijkeRechtshandeling> ;
     omgevingsvergunning:auteur <https://data.vlaanderen.be/id/org/puborg/1> ;
     omgevingsvergunning:uitwerkingTijdstip "2018-08-01"^^xsd:date ;
-    omgevingsvergunning:publicatie <https://data.vlaanderen.be/id/omv/pub/1> ;
+    omgevingsvergunning:publicatie <https://data.vlaanderen.be/id/omv/pub/1>, <https://data.vlaanderen.be/id/omv/pub/2> ;
     omgevingsvergunning:inhoud <https://data.vlaanderen.be/id/omv/bep/2> ;
-    omgevingsvergunning:zaak <https://data.vlaanderen.be/id/omv/zaak/1> .
+    omgevingsvergunning:zaak <https://data.vlaanderen.be/id/omv/zaak/1> ;
+    generiek:document <https://data.vlaanderen.be/id/generiek/document/1> .
+
+<https://data.vlaanderen.be/id/generiek/document/1> a generiek:Document ;
+    generiek:url <https://data.vlaanderen.be/id/generiek/document/1?download> ;
+    dcterms:type <https://data.vlaanderen.be/id/concept/JuridischeCategorie/Kopie> .
 
 <https://data.vlaanderen.be/id/generiek/identificator/1> a adms:Identifier ;
-    skos:notation "2018N034335" .
+    skos:notation "2018N034335"^^<https://data.vlaanderen.be/id/concept/IdentificatorSchema/Rechtshandelingnummer> .
 
 <https://data.vlaanderen.be/id/org/puborg/1> a eu:PublicOrganisation ;
     skos:prefLabel "Deputatie Provincie Limburg" .
     
-
 <https://data.vlaanderen.be/id/omv/pub/1> a omgevingsvergunning:Publicatie ;
+    dcterms:type <https://data.vlaanderen.be/id/concept/PublicatieType/BekendMakingOmgevingsloket> ;
+    omgevingsvergunning:publicatieTijdstip "2018-08-01"^^xsd:date .
+
+<https://data.vlaanderen.be/id/omv/pub/2> a omgevingsvergunning:Publicatie ;
     dcterms:type <https://data.vlaanderen.be/id/concept/PublicatieType/Aanplakking> ;
     omgevingsvergunning:publicatieTijdstip "2018-08-22"^^xsd:date .
 
@@ -108,10 +117,19 @@
     omgevingsvergunning:rechtsverhouding <https://data.vlaanderen.be/id/omv/recht/1> .
  
 # Beroep
+
 <https://data.vlaanderen.be/id/omv/aanrec/1> a omgevingsvergunning:AanwendingRechtsmiddel ;
+    omgevingsvergunning:auteur <https://data.vlaanderen.be/id/per/gerper/1> ;
     omgevingsvergunning:ontvangstTijdstip "2018-09-21"^^xsd:date ; 
     omgevingsvergunning:rechtsmiddel <https://data.vlaanderen.be/id/omv/rechtsmiddel/1> ;
-    omgevingsvergunning:bestredenBeslissing <https://data.vlaanderen.be/id/omv/eenbestrec/1> .
+    omgevingsvergunning:bestredenBeslissing <https://data.vlaanderen.be/id/omv/eenbestrec/1> ;
+    omgevingsvergunning:zaak <https://data.vlaanderen.be/id/omv/zaak/1> .
+
+<https://data.vlaanderen.be/id/per/gerper/1> a persoon:GeregistreerdPersoon ;
+    adms:identificator <https://data.vlaanderen.be/id/generiek/identificator/2> .
+
+<https://data.vlaanderen.be/id/generiek/identificator/2> a adms:Identifier ;
+    skos:notation "xxxxxx.xxx.xx"^^<https://data.vlaanderen.be/id/concept/IdentificatorSchema/INSZnummer> .
 
 <https://data.vlaanderen.be/id/omv/rechtsmiddel/1> a omgevingsvergunning:Rechtsmiddel ;
     dcterms:type <https://data.vlaanderen.be/id/concept/JuridischeCategorie/AdministratiefBeroep>, <https://data.vlaanderen.be/id/concept/JuridischeCategorie/Schorsend> ;
@@ -134,7 +152,25 @@
     omgevingsvergunning:rechtsverhouding <https://data.vlaanderen.be/id/omv/recht/1> .
 
 # Beslissing in beroep
+
+<https://data.vlaanderen.be/id/omv/zaak/2> a omgevingsvergunning:Zaak ;
+    omgevingsvergunning:identificator <https://data.vlaanderen.be/id/generiek/identificator/3> ;
+    omgevingsvergunning:procedure <https://data.vlaanderen.be/id/omv/pro/2> ;
+    omgevingsvergunning:zaakReferentie  <https://data.vlaanderen.be/id/omv/zaakver/1>.
+
+<https://data.vlaanderen.be/id/omv/zaakver/1> a omgevingsvergunning:ZaakVerwijzing ;
+    dcterms:type <https://data.vlaanderen.be/id/concept/JuridischeCategorie/VorigeZaak> ;
+    omgevingsvergunning:zaak <https://data.vlaanderen.be/id/omv/zaak/1> .
+
+<https://data.vlaanderen.be/id/generiek/identificator/3> a adms:Identifier ;
+    skos:notation "OMV_2018014896"^^<https://data.vlaanderen.be/id/concept/IdentificatorSchema/OMVnummer> .
+
+<https://data.vlaanderen.be/id/omv/pro/2> a omgevingsvergunning:Procedure;
+    dcterms:type <https://data.vlaanderen.be/id/concept/JuridischeCategorie/LaatsteAdministratieveAanleg>, <https://data.vlaanderen.be/id/concept/JuridischeCategorie/OmgevingsvergunnningAdministratiefBeroep> ;
+    omgevingsvergunning:rechtsmiddel <https://data.vlaanderen.be/id/omv/rechtsmiddel/2> .
+
 <https://data.vlaanderen.be/id/omv/eenbestrec/2> a omgevingsvergunning:EenzijdigeBestuurlijkeRechtshandeling ;
+    dcterms:type <https://data.vlaanderen.be/id/concept/JuridischeCategorie/UitdrukkelijkeRechtshandeling>, <https://data.vlaanderen.be/id/concept/JuridischeCategorie/RechtshandelingInBeroep> ;
     omgevingsvergunning:auteur <https://data.vlaanderen.be/id/org/puborg/2> ;
     omgevingsvergunning:uitwerkingTijdstip "2019-02-15"^^xsd:date ;
     omgevingsvergunning:inhoud <https://data.vlaanderen.be/id/omv/bep/3> .
@@ -147,6 +183,7 @@
     omgevingsvergunning:rechtshandeling <https://data.vlaanderen.be/id/omv/aanrec/1> .
 
 # Vergunde toestand T3 - na beslissing in beroep
+
 <https://data.vlaanderen.be/id/omv/vasvertoe/1> a omgevingsvergunning:VaststellingVergundeToestand ;
     generiek:locatie <https://data.vlaanderen.be/id/adres/3055609> ;
     omgevingsvergunning:vaststellingTijdstip "2018-09-22T00:00:00"^^xsd:dateTime ;
@@ -160,16 +197,3 @@
     omgevingsvergunning:rechtsverhouding <https://data.vlaanderen.be/id/omv/recht/1> .
 
 # Vaststelling
-
-
-
-
-
-
-
-
-
-
-
-
-
