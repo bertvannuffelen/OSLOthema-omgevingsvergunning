@@ -1,0 +1,161 @@
+{
+  "@context": {
+    "adms": "http://www.w3.org/ns/adms#",
+    "adres": "https://data.vlaanderen.be/ns/adres#",
+    "dcterms": "http://purl.org/dc/terms/",
+    "generiek": "https://data.vlaanderen.be/ns/generiek#",
+    "omgevingsvergunning": "https://data.vlaanderen.be/ns/omgevingsvergunning#",
+    "perceel": "https://data.vlaanderen.be/ns/perceel#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@graph": [
+    {
+      "@id": "https://data.vlaanderen.be/id/adres/3055609",
+      "@type": "adres:Adres"
+    },
+    {
+      "@id": "https://data.vlaanderen.be/id/kp/71328D0148/00F00",
+      "@type": "perceel:KadastraalPlanperceel"
+    },
+    {
+      "@id": "https://data.vlaanderen.be/id/kp/71328D0166/00A002",
+      "@type": "perceel:KadastraalPlanperceel"
+    },
+    {
+      "@id": "https://data.vlaanderen.be/id/kp/71328D0168/00L000",
+      "@type": "perceel:KadastraalPlanperceel"
+    },
+    {
+      "@id": "https://data.vlaanderen.be/id/kp/71328D0266/00H00",
+      "@type": "perceel:KadastraalPlanperceel"
+    },
+    {
+      "@id": "https://data.vlaanderen.be/id/omv/aan/1",
+      "@type": "omgevingsvergunning:Aanvraag",
+      "omgevingsvergunning:inhoud": {
+        "@id": "https://data.vlaanderen.be/id/omv/bep/1"
+      }
+    },
+    {
+      "@id": "https://data.vlaanderen.be/id/omv/act/1",
+      "@type": "omgevingsvergunning:Activiteit",
+      "generiek:locatie": [
+        {
+          "@id": "https://data.vlaanderen.be/id/adres/3055609"
+        },
+        {
+          "@id": "https://data.vlaanderen.be/id/kp/71328D0168/00L000"
+        },
+        {
+          "@id": "https://data.vlaanderen.be/id/kp/71328D0166/00A002"
+        },
+        {
+          "@id": "https://data.vlaanderen.be/id/kp/71328D0148/00F00"
+        },
+        {
+          "@id": "https://data.vlaanderen.be/id/kp/71328D0266/00H00"
+        }
+      ],
+      "omgevingsvergunning:juridischeKwalificatie": [
+        {
+          "@id": "https://data.vlaanderen.be/id/omv/jcv/1"
+        },
+        {
+          "@id": "https://data.vlaanderen.be/id/omv/jcv/2"
+        },
+        {
+          "@id": "https://data.vlaanderen.be/id/omv/jcv/3"
+        }
+      ]
+    },
+    {
+      "@id": "https://data.vlaanderen.be/id/omv/bep/1",
+      "@type": "omgevingsvergunning:Bepaling",
+      "omgevingsvergunning:rechtsverhouding": {
+        "@id": "https://data.vlaanderen.be/id/omv/rec/1"
+      }
+    },
+    {
+      "@id": "https://data.vlaanderen.be/id/omv/bep/2",
+      "@type": "omgevingsvergunning:Bepaling",
+      "omgevingsvergunning:RechtshandelingVerwijzing": {
+        "@id": "https://data.vlaanderen.be/id/omv/rv/1"
+      }
+    },
+    {
+      "@id": "https://data.vlaanderen.be/id/omv/ebr/1",
+      "@type": "omgevingsvergunning:EenzijdigeBestuurlijkeRechtshandeling",
+      "omgevingsvergunning:inhoud": {
+        "@id": "https://data.vlaanderen.be/id/omv/bep/2"
+      },
+      "omgevingsvergunning:publicatie": {
+        "@id": "https://data.vlaanderen.be/id/omv/pub/1"
+      },
+      "omgevingsvergunning:uitwerkingsTijdstip": {
+        "@type": "xsd:date",
+        "@value": "2018-08-01"
+      }
+    },
+    {
+      "@id": "https://data.vlaanderen.be/id/omv/jcv/1",
+      "@type": "omgevingsvergunning:JuridischeCategorieVerwijzing",
+      "dcterms:type": {
+        "@id": "https://data.vlaanderen.be/id/concept/JuridischeVerwijzingType/Kwalificatie"
+      },
+      "omgevingsvergunning:juridischeCategorie": {
+        "@id": "https://data.vlaanderen.be/id/concept/JuridischeCategorie/Aanpassingswerken"
+      }
+    },
+    {
+      "@id": "https://data.vlaanderen.be/id/omv/jcv/2",
+      "@type": "omgevingsvergunning:JuridischeCategorieVerwijzing",
+      "dcterms:type": {
+        "@id": "https://data.vlaanderen.be/id/concept/JuridischeVerwijzingType/Kwalificatie"
+      },
+      "omgevingsvergunning:juridischeCategorie": {
+        "@id": "https://data.vlaanderen.be/id/concept/JuridischeCategorie/BijkomendeVerharding"
+      }
+    },
+    {
+      "@id": "https://data.vlaanderen.be/id/omv/jcv/3",
+      "@type": "omgevingsvergunning:JuridischeCategorieVerwijzing",
+      "dcterms:type": {
+        "@id": "https://data.vlaanderen.be/id/concept/JuridischeVerwijzingType/Kwalificatie"
+      },
+      "omgevingsvergunning:juridischeCategorie": {
+        "@id": "https://data.vlaanderen.be/id/concept/JuridischeCategorie/RooienVegetatie"
+      }
+    },
+    {
+      "@id": "https://data.vlaanderen.be/id/omv/pub/1",
+      "@type": "omgevingsvergunning:Publicatie",
+      "dcterms:type": {
+        "@id": "https://data.vlaanderen.be/id/concept/PublicatieType/Aanplakking"
+      },
+      "omgevingsvergunning:publicatieTijdstip": {
+        "@type": "xsd:date",
+        "@value": "2018-08-22"
+      }
+    },
+    {
+      "@id": "https://data.vlaanderen.be/id/omv/rec/1",
+      "@type": "omgevingsvergunning:Recht",
+      "omgevingsvergunning:activiteit": {
+        "@id": "https://data.vlaanderen.be/id/omv/act/1"
+      }
+    },
+    {
+      "@id": "https://data.vlaanderen.be/id/omv/rv/1",
+      "@type": "omgevingsvergunning:Rechtsgevolg",
+      "dcterms:type": {
+        "@id": "https://data.vlaanderen.be/id/concept/JuridischeVerwijzingType/Toekenning"
+      },
+      "omgevingsvergunning:rechtshandeling": {
+        "@id": "https://data.vlaanderen.be/id/omv/aan/1"
+      }
+    }
+  ]
+}

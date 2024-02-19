@@ -1,0 +1,19 @@
+{
+    "adms": "http://www.w3.org/ns/adms#",
+    "adres": "https://data.vlaanderen.be/ns/adres#",
+    "cpsv": "http://purl.org/vocab/cpsv#",
+    "dcterms": "http://purl.org/dc/terms/",
+    "eu": "http://data.europa.eu/m8g/",
+    "generiek": "https://data.vlaanderen.be/ns/generiek#",
+
+    "omgevingsvergunning": "https://data.vlaanderen.be/ns/omgevingsvergunning#",
+    "organisatie": "https://data.vlaanderen.be/ns/organisatie#",
+    "perceel": "https://data.vlaanderen.be/ns/perceel#",
+    "persoon": "https://data.vlaanderen.be/ns/persoon#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "regorg": "http://www.w3.org/ns/regorg#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+}
+

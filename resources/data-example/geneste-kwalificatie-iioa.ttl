@@ -1,0 +1,54 @@
+@prefix adms: <http://www.w3.org/ns/adms#> .
+@prefix adres: <https://data.vlaanderen.be/ns/adres#> .
+@prefix cpsv: <http://purl.org/vocab/cpsv#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix eu: <http://data.europa.eu/m8g/> .
+@prefix generiek: <https://data.vlaanderen.be/ns/generiek#> .
+@prefix juridische_categorie: <https://data.vlaanderen.be/id/concept/JuridischeCategorie/> .
+@prefix omgevingsvergunning: <https://data.vlaanderen.be/ns/omgevingsvergunning#> .
+@prefix organisatie: <https://data.vlaanderen.be/ns/organisatie#> .
+@prefix perceel: <https://data.vlaanderen.be/ns/perceel#> .
+@prefix persoon: <https://data.vlaanderen.be/ns/persoon#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix regorg: <http://www.w3.org/ns/regorg#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://data.vlaanderen.be/id/omv/aan/1> a omgevingsvergunning:Aanvraag ;
+    omgevingsvergunning:aanvrager <https://data.vlaanderen.be/id/org/regorg/1> ;
+    omgevingsvergunning:inhoud <https://data.vlaanderen.be/id/omv/bep/1> .
+
+<https://data.vlaanderen.be/id/omv/bep/1> a omgevingsvergunning:Bepaling ;
+    omgevingsvergunning:juridischeKwalificatie <https://data.vlaanderen.be/id/omv/kwa/1> .
+
+ <https://data.vlaanderen.be/id/omv/kwa/1> a omgevingsvergunning:JuridischeKwalificatie ;
+    omgevingsvergunning:activiteit <https://data.vlaanderen.be/id/omv/act/1> ;
+    omgevingsvergunning:kwalificatietype juridische_categorie:IIOA ;
+    omgevingsvergunning:juridischeKwalificatie <https://data.vlaanderen.be/id/omv/kwa/2> .
+
+<https://data.vlaanderen.be/id/omv/act/1> a omgevingsvergunning:Activiteit ;
+    omgevingsvergunning:ruimtelijkeEenheid <https://data.vlaanderen.be/id/perceel/ruieen/1> .
+
+<https://data.vlaanderen.be/id/perceel/ruieen/1> a omgevingsvergunning:RuimtelijkeEenheid ;
+    perceel:adres <https://data.vlaanderen.be/id/adres/3055609> .
+
+<https://data.vlaanderen.be/id/omv/kwa/2> a omgevingsvergunning:IIOAIndeling ;
+    omgevingsvergunning:juridischeVerwijzing juridische_categorie:NieuweActiviteit ;
+    omgevingsvergunning:rubriek <https://data.vlaanderen.be/id/omv/rub/1> . 
+
+<https://data.vlaanderen.be/id/omv/rub/1> a omgevingsvergunning:VlaremRubriek ;
+    omgevingsvergunning:juridischeVerwijzing juridische_categorie:LozingAfvalwaterKoelwater , <https://data.vlaanderen.be/id/jurwer/vlarem/3-2-2-a> ;
+    omgevingsvergunning:activiteit <https://data.vlaanderen.be/id/omv/loz/1> .
+
+<https://data.vlaanderen.be/id/omv/loz/1> a omgevingsvergunning:Lozingpunt ;
+    omgevingsvergunning:activiteit <https://data.vlaanderen.be/id/omv/act/1> ;
+    omgevingsvergunning:output <https://data.vlaanderen.be/id/generiek/1>, <https://data.vlaanderen.be/id/generiek/2> .
+
+<https://data.vlaanderen.be/id/generiek/1> a generiek:KwantitatieveWaarde ;
+    generiek:bedrag "0.24"^^xsd:float ;
+    generiek:eenheid <https://data.vlaanderen.be/id/concept/Omgeving/MaxKubiekeMeterPerUur> .
+
+<https://data.vlaanderen.be/id/generiek/2> a generiek:KwantitatieveWaarde ;
+    generiek:bedrag "3.91"^^xsd:float ;
+    generiek:eenheid <https://data.vlaanderen.be/id/concept/Omgeving/MaxKubiekeMeterPerDag> .

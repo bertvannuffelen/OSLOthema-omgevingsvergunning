@@ -97,13 +97,14 @@
     omgevingsvergunning:publicatieTijdstip "2018-08-22"^^xsd:date .
 
 <https://data.vlaanderen.be/id/omv/bep/2> a omgevingsvergunning:Bepaling ;
-    omgevingsvergunning:RechtshandelingVerwijzing <https://data.vlaanderen.be/id/omv/recver/1> .
+    omgevingsvergunning:rechtshandelingVerwijzing <https://data.vlaanderen.be/id/omv/recver/1> .
 
 <https://data.vlaanderen.be/id/omv/recver/1> a omgevingsvergunning:RechtshandelingVerwijzing ;
     dcterms:type <https://data.vlaanderen.be/id/concept/JuridischeVerwijzingType/Toekenning> ;
     omgevingsvergunning:rechtshandeling <https://data.vlaanderen.be/id/omv/aan/1> .
 
 # Vergunde toestand T1 - 1 dag na aanplakking
+
 <https://data.vlaanderen.be/id/omv/vasvertoe/1> a omgevingsvergunning:VaststellingVergundeToestand ;
     generiek:locatie <https://data.vlaanderen.be/id/adres/3055609> ;
     omgevingsvergunning:vaststellingTijdstip "2018-08-23T00:00:00"^^xsd:dateTime ;
@@ -139,7 +140,7 @@
     skos:prefLabel "Vlaamse Regering"@nl .
 
 # Vergunde toestand T2 - na aanwending rechtsmiddel
-<https://data.vlaanderen.be/id/omv/vasvertoe/1> a omgevingsvergunning:VaststellingVergundeToestand ;
+<https://data.vlaanderen.be/id/omv/vasvertoe/2> a omgevingsvergunning:VaststellingVergundeToestand ;
     generiek:locatie <https://data.vlaanderen.be/id/adres/3055609> ;
     omgevingsvergunning:vaststellingTijdstip "2018-09-22T00:00:00"^^xsd:dateTime ;
     omgevingsvergunning:vergundeToestand <https://data.vlaanderen.be/id/omv/vertoe/2> .
@@ -156,7 +157,7 @@
 <https://data.vlaanderen.be/id/omv/zaak/2> a omgevingsvergunning:Zaak ;
     omgevingsvergunning:identificator <https://data.vlaanderen.be/id/generiek/identificator/3> ;
     omgevingsvergunning:procedure <https://data.vlaanderen.be/id/omv/pro/2> ;
-    omgevingsvergunning:zaakReferentie  <https://data.vlaanderen.be/id/omv/zaakver/1>.
+    omgevingsvergunning:zaakVerwijzing  <https://data.vlaanderen.be/id/omv/zaakver/1>.
 
 <https://data.vlaanderen.be/id/omv/zaakver/1> a omgevingsvergunning:ZaakVerwijzing ;
     dcterms:type <https://data.vlaanderen.be/id/concept/JuridischeCategorie/VorigeZaak> ;
@@ -176,7 +177,7 @@
     omgevingsvergunning:inhoud <https://data.vlaanderen.be/id/omv/bep/3> .
 
 <https://data.vlaanderen.be/id/omv/bep/3> a omgevingsvergunning:Bepaling ;
-    omgevingsvergunning:RechtshandelingVerwijzing <https://data.vlaanderen.be/id/omv/rechanver/2> .
+    omgevingsvergunning:rechtshandelingVerwijzing <https://data.vlaanderen.be/id/omv/rechanver/2> .
 
 <https://data.vlaanderen.be/id/omv/rechanver/2> a omgevingsvergunning:RechtshandelingVerwijzing ;
     dcterms:type <https://data.vlaanderen.be/id/concept/JuridischeVerwijzingType/Gegrond> ;
@@ -184,15 +185,15 @@
 
 # Vergunde toestand T3 - na beslissing in beroep
 
-<https://data.vlaanderen.be/id/omv/vasvertoe/1> a omgevingsvergunning:VaststellingVergundeToestand ;
+<https://data.vlaanderen.be/id/omv/vasvertoe/3> a omgevingsvergunning:VaststellingVergundeToestand ;
     generiek:locatie <https://data.vlaanderen.be/id/adres/3055609> ;
     omgevingsvergunning:vaststellingTijdstip "2018-09-22T00:00:00"^^xsd:dateTime ;
-    omgevingsvergunning:vergundeToestand <https://data.vlaanderen.be/id/omv/vertoe/2> .
+    omgevingsvergunning:vergundeToestand <https://data.vlaanderen.be/id/omv/vertoe/3> .
 
-<https://data.vlaanderen.be/id/omv/vertoe/2> a omgevingsvergunning:VergundeToestand ;
-    omgevingsvergunning:rechtsverhoudingVerwijzing <https://data.vlaanderen.be/id/omv/recverver/2> .
+<https://data.vlaanderen.be/id/omv/vertoe/3> a omgevingsvergunning:VergundeToestand ;
+    omgevingsvergunning:rechtsverhoudingVerwijzing <https://data.vlaanderen.be/id/omv/recverver/3> .
 
-<https://data.vlaanderen.be/id/omv/recverver/2> a omgevingsvergunning:RechtsverhoudingVerwijzing ;
+<https://data.vlaanderen.be/id/omv/recverver/3> a omgevingsvergunning:RechtsverhoudingVerwijzing ;
     dcterms:type <https://data.vlaanderen.be/id/concept/JuridischeVerwijzingType/Vernietigd> ;
     omgevingsvergunning:rechtsverhouding <https://data.vlaanderen.be/id/omv/recht/1> .
 

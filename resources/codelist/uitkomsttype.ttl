@@ -2,13 +2,11 @@
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
-<https://data.vlaanderen.be/id/conceptscheme/UitkomstType>
-   a skos:ConceptScheme ;
+<https://data.vlaanderen.be/id/conceptscheme/UitkomstType> a skos:ConceptScheme ;
    skos:definition "Typologie van de mogelijke uitsluitsels van procedures en zaken."@nl ;
    skos:prefLabel "Uitkomst Type"@nl .
 
-<https://data.vlaanderen.be/id/concept/UitkomstType/Toekenning>
-   a skos:Concept ;
+<https://data.vlaanderen.be/id/concept/UitkomstType/Toekenning> a skos:Concept ;
    skos:prefLabel "Toekenning"@nl ;
    skos:definition "Het recht om de aangevraagde activiteiten wordt zonder meer toegekend."@nl ;
    skos:inScheme <https://data.vlaanderen.be/id/conceptscheme/UitkomstType> .

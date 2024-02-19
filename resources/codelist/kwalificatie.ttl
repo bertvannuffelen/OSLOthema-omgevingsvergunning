@@ -1,0 +1,44 @@
+@prefix adms: <http://www.w3.org/ns/adms#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcmiperiod: <http://dublincore.org/documents/2006/04/10/dcmi-period/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix omgevingsvergunning: <https://data.vlaanderen.be/ns/omgevingsvergunning#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos-thes: <http://purl.org/iso25964/skos-thes#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://data.vlaanderen.be/doc/conceptscheme/omgevingsvergunning/Rechtsfeit> a skos:ConceptScheme . 
+
+<https://data.vlaanderen.be/doc/concept/omgevingsvergunning/Rechtsfeit/AanbouwPlaatsen> a skos:Concept ;
+    skos:prefLabel "Aanbouw, uitbouw of bijgebouw bouwen of vervangen" ;
+    skos:inScheme <https://data.vlaanderen.be/doc/conceptscheme/omgevingsvergunning/Rechtsfeit> .
+
+<https://data.vlaanderen.be/doc/concept/omgevingsvergunning/Rechtsfeit/ZwembadAanleggen> a skos:Concept ;
+    skos:prefLabel "Zwembad aanleggen" ;
+    skos:inScheme <https://data.vlaanderen.be/doc/conceptscheme/omgevingsvergunning/Rechtsfeit> ;
+    skos:broader <https://data.vlaanderen.be/doc/conceptscheme/omgevingsvergunning/AanbouwPlaatsen> ;
+    skos:relatedMatch <https://data.vlaanderen.be/doc/concept/omgevingsvergunning/JuridischeCategorie/NietOverdekteConstructies> .
+
+<https://data.vlaanderen.be/doc/conceptscheme/omgevingsvergunning/JuridischeCategorie> a skos:ConceptScheme .
+
+<https://data.vlaanderen.be/doc/concept/omgevingsvergunning/JuridischeCategorie/StedenbouwkundigeHandeling> a skos:Concept ;
+    skos:prefLabel "Stedenbouwkundige handeling" ;
+    skos:inScheme <https://data.vlaanderen.be/doc/conceptscheme/omgevingsvergunning/JuridischeCategorie> .
+
+<https://data.vlaanderen.be/doc/concept/omgevingsvergunning/JuridischeCategorie/VrijgesteldeHandeling> a skos:Concept ;
+    skos:prefLabel "Handelingen waarvoor geen stedenbouwkundige vergunning nodig is" ;
+    skos:inScheme <https://data.vlaanderen.be/doc/conceptscheme/omgevingsvergunning/JuridischeCategorie> ;
+    skos:broader <https://data.vlaanderen.be/doc/concept/omgevingsvergunning/JuridischeCategorie/StedenbouwkundigeHandeling> .
+
+<https://data.vlaanderen.be/doc/concept/omgevingsvergunning/JuridischeCategorie/NietOverdekteConstructies> a skos:Concept ;
+    skos:prefLabel "Niet-overdekte constructies in zijtuin en achtertuin" ;
+    skos:inScheme <https://data.vlaanderen.be/doc/conceptscheme/omgevingsvergunning/JuridischeCategorie> ;
+    skos:broader <https://data.vlaanderen.be/doc/concept/omgevingsvergunning/JuridischeCategorie/VrijgesteldeHandeling> .
+
+New codelist - BesluitType

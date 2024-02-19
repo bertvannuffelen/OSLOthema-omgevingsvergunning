@@ -2,21 +2,20 @@
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
-<https://data.vlaanderen.be/id/conceptscheme/ProcedureType>
-   a skos:ConceptScheme ;
+<https://data.vlaanderen.be/id/conceptscheme/ProcedureType> a skos:ConceptScheme ;
    skos:definition "Typologie van de mogelijke types procedure."@nl .
 
-<https://data.vlaanderen.be/id/concept/JuridischeCategorie/GewoneOmgevingsvergunningsprocedure>
-   a skos:Concept ;
+<https://data.vlaanderen.be/id/concept/JuridischeCategorie/GewoneOmgevingsvergunningsprocedure> a skos:Concept ;
    skos:prefLabel "Gewone omgevingsvergunningsprocedure volgens het Omgevingsdecreet."@nl ;
    skos:inScheme <https://data.vlaanderen.be/id/conceptscheme/ProcedureType> .
 
-<https://data.vlaanderen.be/id/concept/JuridischeCategorie/AdministratiefBeroep>
-    a skos:Concept ;
+<https://data.vlaanderen.be/id/concept/JuridischeCategorie/AdministratiefBeroep> a skos:Concept ;
     skos:prefLabel "Administratief beroep"@nl ;
     skos:inScheme <https://data.vlaanderen.be/id/conceptscheme/ProcedureType> .
 
-<https://data.vlaanderen.be/id/concept/JuridischeCategorie/Schorsend>
-   a skos:Concept ;
+<https://data.vlaanderen.be/id/concept/JuridischeCategorie/Schorsend> a skos:Concept ;
    skos:prefLabel "Schorsend"@nl ;
    skos:inScheme <https://data.vlaanderen.be/id/conceptscheme/ProcedureType> .
+
+<https://data.vlaanderen.be/id/concept/JuridischeCategorie/OmgevingsvergunnningAdministratiefBeroep> a skos:Concept ;
+   skos:prefLabel "Administratief beroepsprocedure m.b.t. omgevingsbeslissingen"@nl .

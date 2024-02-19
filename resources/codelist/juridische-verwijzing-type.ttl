@@ -2,36 +2,30 @@
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
-<https://data.vlaanderen.be/id/conceptscheme/JuridischeVerwijzingType>
-   a skos:ConceptScheme ;
+<https://data.vlaanderen.be/id/conceptscheme/JuridischeVerwijzingType> a skos:ConceptScheme ;
    skos:definition "Typologie van de mogelijke soorten juridische verwijzingen."@nl .
 
-<https://data.vlaanderen.be/id/concept/JuridischeVerwijzingType/Kwalificatie>
-   a skos:Concept ;
+<https://data.vlaanderen.be/id/concept/JuridischeVerwijzingType/Kwalificatie> a skos:Concept ;
    skos:prefLabel "Kwalificatie"@nl ;
    skos:definition "Het mechanisme dat leidt tot de omzetting van een concreet geval naar een juridische categorie. Kwalificeren is het bepalen van de aard van een rechtsverhouding of een goed met het oog op het klasseren ervan in een bestaande juridische categorie."@nl ;
    skos:inScheme <https://data.vlaanderen.be/id/conceptscheme/JuridischeVerwijzingType> .
 
-<https://data.vlaanderen.be/id/concept/JuridischeVerwijzingType/Toekenning>
-   a skos:Concept ;
+<https://data.vlaanderen.be/id/concept/JuridischeVerwijzingType/Toekenning> a skos:Concept ;
    skos:prefLabel "Toekenning"@nl ;
    skos:definition "'Rechtentoekenning' verwijst naar de rechtshandeling waarbij bepaalde rechten, privileges of bevoegdheden worden toegekend aan een rechtssubject."@nl ;
    skos:inScheme <https://data.vlaanderen.be/id/conceptscheme/JuridischeVerwijzingType> .
 
-<https://data.vlaanderen.be/id/concept/JuridischeVerwijzingType/Gegrond>
-   a skos:Concept ;
+<https://data.vlaanderen.be/id/concept/JuridischeVerwijzingType/Gegrond> a skos:Concept ;
    skos:prefLabel "Gegrond"@nl ;
    skos:definition "Beslissing van een rechtscollege of een bevoegde autoriteit waarbij een bepaalde vordering als geldig en terecht wordt beschouwd."@nl ;
    skos:inScheme <https://data.vlaanderen.be/id/conceptscheme/JuridischeVerwijzingType> .
 
-<https://data.vlaanderen.be/id/concept/JuridischeVerwijzingType/NietUitvoerbaar>
-   a skos:Concept ;
+<https://data.vlaanderen.be/id/concept/JuridischeVerwijzingType/NietUitvoerbaar> a skos:Concept ;
    skos:prefLabel "Niet uitvoerbaar"@nl ;
    skos:definition "Rechtshandeling is genomen maar rechtsgevolgen hebben (nog) geen uitwerking. Dit is bijvoorbeeld het geval van een omgevingsvergunning binnen vijfendertig dagen, te rekenen vanaf de dag na de eerste dag van de aanplakking."@nl ;
    skos:inScheme <https://data.vlaanderen.be/id/conceptscheme/JuridischeVerwijzingType> .
 
-<https://data.vlaanderen.be/id/concept/JuridischeVerwijzingType/Geschorst>
-   a skos:Concept ;
+<https://data.vlaanderen.be/id/concept/JuridischeVerwijzingType/Geschorst> a skos:Concept ;
    skos:prefLabel "Geschorst"@nl ;
    skos:definition "Rechtsgevolgen van de rechtshandeling zijn geschorst."@nl ;
    skos:inScheme <https://data.vlaanderen.be/id/conceptscheme/JuridischeVerwijzingType> .

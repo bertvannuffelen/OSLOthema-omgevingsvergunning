@@ -1,0 +1,92 @@
+{
+  "@context": {
+    "adms": "http://www.w3.org/ns/adms#",
+    "adres": "https://data.vlaanderen.be/ns/adres#",
+    "cpsv": "http://purl.org/vocab/cpsv#",
+    "dcterms": "http://purl.org/dc/terms/",
+    "eu": "http://data.europa.eu/m8g/",
+    "generiek": "https://data.vlaanderen.be/ns/generiek#",
+    "omgevingsvergunning": "https://data.vlaanderen.be/ns/omgevingsvergunning#",
+    "organisatie": "https://data.vlaanderen.be/ns/organisatie#",
+    "perceel": "https://data.vlaanderen.be/ns/perceel#",
+    "persoon": "https://data.vlaanderen.be/ns/persoon#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "regorg": "http://www.w3.org/ns/regorg#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@id": "https://data.vlaanderen.be/id/omv/aan/1",
+  "@type": "omgevingsvergunning:Aanvraag",
+  "omgevingsvergunning:aanvrager": {
+    "@id": "https://data.vlaanderen.be/id/org/regorg/1"
+  },
+  "omgevingsvergunning:inhoud": [
+    {
+      "@id": "https://data.vlaanderen.be/id/omv/bep/1",
+      "@type": "omgevingsvergunning:Bepaling",
+      "omgevingsvergunning:juridischeKwalificatie": [
+        {
+          "@id": "https://data.vlaanderen.be/id/omv/kwa/1",
+          "@type": "omgevingsvergunning:JuridischeKwalificatie",
+          "omgevingsvergunning:voorwerp": {
+            "@id": "https://data.vlaanderen.be/id/omv/act/1",
+            "@type": "omgevingsvergunning:Activiteit",
+            "omgevingsvergunning:ruimtelijkeEenheid": {
+              "@id": "https://data.vlaanderen.be/id/perceel/ruieen/1",
+              "@type": "omgevingsvergunning:RuimtelijkeEenheid",
+              "perceel:adres": {
+                "@id": "https://data.vlaanderen.be/id/adres/3055609",
+                "@type": "adres:Adres"
+              }
+            }
+          },
+          "omgevingsvergunning:kwalificatietype": {
+            "@id": "https://data.vlaanderen.be/id/concept/JuridischeCategorie/IIOA",
+            "@type": "omgevingsvergunning:JuridischeCategorie"
+          },
+          "omgevingsvergunning:juridischeKwalificatie": [
+            {
+              "@id": "https://data.vlaanderen.be/id/omv/kwa/2",
+              "@type": "omgevingsvergunning:IIOAIndeling",
+              "omgevingsvergunning:juridischeVerwijzing": {
+                "@id": "https://data.vlaanderen.be/id/concept/JuridischeCategorie/NieuweActiviteit",
+                "@type": "omgevingsvergunning:JuridischeCategorie"
+              },
+              "omgevingsvergunning:rubriek": {
+                "@id": "https://data.vlaanderen.be/id/omv/rub/1",
+                "@type": "omgevingsvergunning:Indelingsrubriek",
+                "omgevingsvergunning:juridischeVerwijzing": [
+                  {
+                    "@id": "https://data.vlaanderen.be/id/omv/jurwer/vlarem/3-2-2-a",
+                    "@type": "omgevingsvergunning:JuridischWerk"
+                  }
+                ],
+                "omgevingsvergunning:risicoKlasse": "3",
+                "omgevingsvergunning:voorwerp": {
+                  "@id": "https://data.vlaanderen.be/id/omv/loz/1",
+                  "@type": "omgevingsvergunning:Lozingpunt",
+                  "omgevingsvergunning:activiteit": {
+                    "@id": "https://data.vlaanderen.be/id/omv/act/1"
+                  },
+                  "omgevingsvergunning:output": [
+                    {
+                      "@type": "generiek:KwantitatieveWaarde",
+                      "generiek:bedrag": {
+                        "@type": "xsd:float",
+                        "@value": "450.0"
+                      },
+                      "generiek:eenheid": {
+                        "@id": "https://data.vlaanderen.be/id/concept/Omgeving/KubiekeMeterPerJaar"
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
