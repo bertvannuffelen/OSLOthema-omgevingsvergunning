@@ -16,7 +16,7 @@
     "standaardregisterurl": "https://data.vlaanderen.be/standaarden/kandidaat-standaard/applicatieprofiel-omgevingsvergunning.html"
   },
   {
-    "name": "omgevingsvergunning-voc",
+    "name": "omgevingsvergunning",
     "type": "voc",
     "eap": "OSLO-Omgevingsvergunning.eap",
     "diagram": "OSLO-Omgevingsvergunning-master",
