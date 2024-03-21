@@ -1,8 +1,8 @@
-Dit is de OSLO thema repository voor het traject "Omgevingsvergunning".
+Dit is de OSLO thema repository voor het traject Omgevingsvergunning.
 
 De HTML specificaties van dit traject zijn beschikbaar op volgende links:
 
-|Specificatie|Link|
+||Link|
 |---|---|
 |Vocabularium|https://data.vlaanderen.be/ns/omgevingsvergunning/|
 |Applicatieprofiel|https://data.vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/|
