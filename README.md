@@ -1,1 +1,12 @@
-This is the OLSO thema repository for the traject "OLSO-Omgevingsvergunning"
+Dit is de OSLO thema repository voor het traject "Omgevingsvergunning".
+
+De HTML specificaties van dit traject zijn beschikbaar op volgende links:
+
+|Specificatie|Link|
+|---|---|
+|Vocabularium|https://data.vlaanderen.be/ns/omgevingsvergunning/|
+|Applicatieprofiel|https://data.vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/|
+
+De overeenkomstige overzichtspagina uit het standaardenregister is [hier](https://data.vlaanderen.be/standaarden/kandidaat-standaard/vocabularium-omgevingsvergunning.html) te vinden.
+
+Feedback / opmerkingen / fouten kunnen gemeld worden op de [issue tab](https://github.com/Informatievlaanderen/OSLOthema-omgevingsvergunning/issues).
