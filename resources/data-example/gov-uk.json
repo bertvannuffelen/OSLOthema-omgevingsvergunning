@@ -1,0 +1,51 @@
+{
+  "meta": {
+    "publisher": "Environment Agency",
+    "licence": "https://www.gov.uk/government/publications/environment-agency-conditional-licence/environment-agency-conditional-licence",
+    "documentation": "http://environment.data.gov.uk/public-register/view/api-reference.html",
+    "version": 0.1,
+    "comment": "string",
+    "hasFormat": [
+      "http://environment.data.gov.uk/public-register/scrap-metal-dealers/registration.html?_limit=10",
+      "http://environment.data.gov.uk/public-register/scrap-metal-dealers/registration.csv?_limit=10",
+      "http://environment.data.gov.uk/public-register/scrap-metal-dealers/registration.rdf?_limit=10",
+      "http://environment.data.gov.uk/public-register/scrap-metal-dealers/registration.ttl?_limit=10"
+    ],
+    "limit": 0,
+    "offset": 0
+  },
+  "items": [
+    {
+      "@id": "http://example.com",
+      "notation": "string",
+      "offence": [
+        {
+          "@id": "http://example.com",
+          "actionType": {
+            "@id": "http://environment.data.gov.uk/public-register/enforcement-action/def/action-type/enforcement-notice",
+            "prefLabel": "Enforcement Notice"
+          },
+          "agencyFunction": {
+            "@id": "http://environment.data.gov.uk/public-register/enforcement-action/def/agency-function/em",
+            "prefLabel": "Waste"
+          },
+          "legislationTitle": "6.8 Waste Electrical and Electronic Equipment Regulations 2013 (WEEE)"
+        }
+      ],
+      "offender": {
+        "@id": "http://example.com",
+        "name": "string",
+        "hasAddress": {
+          "@id": "http://example.com",
+          "address": "string"
+        }
+      },
+      "actionDate": "2020-09-12",
+      "register": {
+        "@id": "http://environment.data.gov.uk/public-register/enforcement-action/register"
+      },
+      "registrationNumber": "string",
+      "incident": {}
+    }
+  ]
+}
