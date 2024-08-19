@@ -13,7 +13,7 @@
     "contributors-column": "Rol",
     "site": "site-skeleton/omgevingsvergunning-ap",
     "feedbackurl": "https://github.com/Informatievlaanderen/OSLOthema-omgevingsvergunning/issues",
-    "standaardregisterurl": "https://data.vlaanderen.be/standaarden/kandidaat-standaard/applicatieprofiel-omgevingsvergunning.html"
+    "standaardregisterurl": "https://data.vlaanderen.be/standaarden/applicatieprofiel-omgevingsvergunning/"
   },
   {
     "name": "omgevingsvergunning",
@@ -28,6 +28,6 @@
     "contributors-file": "stakeholders.csv",
     "contributors-column": "Rol",
     "feedbackurl": "https://github.com/Informatievlaanderen/OSLOthema-omgevingsvergunning/issues",
-    "standaardregisterurl": "https://data.vlaanderen.be/standaarden/kandidaat-standaard/vocabularium-omgevingsvergunning.html"
+    "standaardregisterurl": "https://data.vlaanderen.be/standaarden/vocabularium-omgevingsvergunning/"
   }
 ]
