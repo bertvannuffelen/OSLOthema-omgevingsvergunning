@@ -4,3 +4,8 @@ YYYY-MM--DD
 
 2024-09-16
 * Correct link to standards registry
+
+2024-09-16
+* remove value "TRUE" in tag parentURI 
+* replace value "True" in the ignore tag with "true" to be toolchain 3 compliant
+* remove the "visualisation aids" to have in classes Inhoud and Rechtshandeling the visual view that these classes are subclasses of Juridisch Werk.
