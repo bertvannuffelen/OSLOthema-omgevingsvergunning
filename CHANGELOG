@@ -9,3 +9,50 @@ YYYY-MM--DD
 * remove value "TRUE" in tag parentURI 
 * replace value "True" in the ignore tag with "true" to be toolchain 3 compliant
 * remove the "visualisation aids" to have in classes Inhoud and Rechtshandeling the visual view that these classes are subclasses of Juridisch Werk.
+
+create seperate VOC EAP
+
+- remove all external packages
+	-> heeft tot gevolg dat bepaalde parentURI aspecten verdwenen zijn. Waar nodig terug herstellen .
+- remove all enumerations
+- check classes for participation in this namespace
+	classes that should be reinvestigated are Aanleiding
+- property verantwoordelijke is reused in subclasses of Rechtshandeling: to be checked
+	additional constraints do not require new URI minting if this redefines is only an additional restriction
+        proposal remove verantwoordelijke from subclasses
+
+- Procedurestap = https://data.vlaanderen.be/ns/dossier#Procedurestap ?
+- Procedurestap komt 2 keer voor als eigenschap met 2 verschillende domeinen voor dezelfde Klasse. Ofwel 2 verschillende eigenschappen ofwel unificeren, maar dan is het domein niet meer uniek. En kan er geen onderscheid onmiddelijk gemaakt worden.
+- connector procedure: Zaak -> Procedure is generalisatie van OSLO Dossier Zaak:procedure -> string
+- verwante zaak: kan gemapped worden op dct:relation (als een willekeurige niet bestemde relatie tussen 2 entiteiten) of ParentURI
+
+Activiteit = gelijk aan Dossier:Activiteit? verschillend?
+description = http://purl.org/dc/terms/description
+eigenschap juridische kwalifificatie komt voor in 2 klassen: verwijzen ze naar dezelfde codelijst? De definitie is circulair en ontbreekt van 1 van de klassen.
+   Indien deze een gelijkaardige gebruiksbasis hebben dan kan je dezelfde +URI gebruiken en die toepassen op verschillende klassen. Met een andere AP definition of AP usagenote om het gebruiksverschil te verklaren.
+
+Waarmerk is een technisch gebeuren: Dan kan eigenlijk niet semantisch bekeken worden, omdat als je de handtekening of een checksum opvraagt dan moet je weten t.o.v. wat dit moet gecontroleerd worden en dat is niet bepaald in het model. Er moet dus uitgegaan worden dat de technische data exchange methode dit aspect opvangt en dat de data dus WAAR is om dat je het aan het processen bent.
+Je kan enkel wel inhoudelijke aspecten in een procedure meegeven: namelijk bv. bekrachtigd door.
+In het algemeen/generiek heeft deze eigenschap ook weinig zin omdat de waarde er juist inzit dat je de juiste validatie tool/methode erop los laat om de correctheid te bepalen. En in dat geval zal Waarmerk ook van vorm veranderen per implementatie en vorm.
+
+
+eigenschap voorwerp verwijst met label naar een Object maar niet naar een locatie, terwijl range een locatie is
+eigenschap locatie verwijst naar een locatie 
+   > klasse Feature vervangen door Location uit generiek-basis: prov-o:Location
+        https://docs.ogc.org/is/22-047r1/22-047r1.html#req_core_feature-class  (ISO 19156)
+        https://www.w3.org/TR/prov-o/#Location (ISO 19112)
+     alternatief (https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0/#Location) locn:Location = dcterms:Location 
+
+generieke relatie lcon:location zou kunnen gebruikt worden voor eigenschap locatie
+
+
+In AP is er een connector tussen klasse Zaak en Dossier in de UML diagramma, maar die heeft geen label > Mag dit weg?
+AP kent werkingsgebied als eigenschap voor PubliekeOrganisatie maar dat komt niet voor in de tabelvoorstelling > Mag dit weg?
+
+verwijdert name tag voor zaakhandeling (blijkbaar ook niet aanwezig in AP)
+
+eigenschap: aanwendingstermijn is een redefine van een eigenschap die niet voorkomt in de superklasse. Lijkt me overbodig.
+
+voeg expliciete link toe van Inhoud en Rechtshandeling naar Juridisch Werk (ipv visualisatie aid)
+
+
