@@ -566,11 +566,12 @@
                       </div>
                             <table class="definition">
                               <tbody>
-			{% for entity in data.entities %}
+			{% for entity in data.entities %} 
+			        <tr>{{ entity.scope }} </tr>
 				{% if entity.scope == "https://data.vlaanderen.be/id/concept/scope/External"   %}
    					{{ renderentity(entity) }}
 				{% endif %}
-				{% for prop in entity.properties % }
+				{% for prop in entity.properties %}
 				{% if property.scope == "https://data.vlaanderen.be/id/concept/scope/External"   %}
    					{{ renderproperty(entity, property) }}
 				{% endif %}
