@@ -569,11 +569,25 @@
 			{% for entity in data.entities %} 
 			        <tr>{{ entity.scope }} </tr>
 				{% if entity.scope == "https://data.vlaanderen.be/id/concept/scope/External"   %}
-   					{{ renderentity(entity) }}
+                                <tr>
+                                  <td>
+                                    <code>{{ entity.applicationProfileLabel[language] }}</code>
+                                  </td>
+                                  <td>
+                                    <code>{{ entity.id }}</code>
+                                  </td>
+                                </tr>
 				{% endif %}
 				{% for prop in entity.properties %}
-				{% if property.scope == "https://data.vlaanderen.be/id/concept/scope/External"   %}
-   					{{ renderproperty(entity, property) }}
+				{% if prop.scope == "https://data.vlaanderen.be/id/concept/scope/External"   %}
+                                <tr>
+                                  <td>
+				  <code>{{ entity.applicationProfileLabel[language] }}.{{property.applicationProfileLabel[language] }}</code>
+                                  </td>
+                                  <td>
+                                    <code>{{ property.id }}</code>
+                                  </td>
+                                </tr>
 				{% endif %}
 				{% endfor %}
 			{% endfor %}
