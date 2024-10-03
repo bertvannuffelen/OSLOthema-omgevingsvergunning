@@ -1,0 +1,17 @@
+[
+  {
+    "name": "omgevingsvergunning",
+    "type": "voc",
+    "eap": "OSLO-Omgevingsvergunning-voc.eap",
+    "diagram": "OSLO-Omgevingsvergunning-master",
+    "template": "omgevingsvergunning-voc.j2",
+    "title": "Omgevingsvergunning",
+    "publication-state": "https://data.vlaanderen.be/id/concept/StandaardStatus/KandidaatStandaard",
+    "publication-date": "2024-09-12",
+    "license": "https://data.vlaanderen.be/id/licentie/modellicentie-gratis-hergebruik/v1.0",
+    "contributors-file": "stakeholders.csv",
+    "contributors-column": "Rol",
+    "feedbackurl": "https://github.com/Informatievlaanderen/OSLOthema-omgevingsvergunning/issues",
+    "standaardregisterurl": "https://data.vlaanderen.be/standaarden/vocabularium-omgevingsvergunning/"
+  }
+]

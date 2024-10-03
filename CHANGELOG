@@ -30,6 +30,7 @@ Activiteit = gelijk aan Dossier:Activiteit? verschillend?
 description = http://purl.org/dc/terms/description
 eigenschap juridische kwalifificatie komt voor in 2 klassen: verwijzen ze naar dezelfde codelijst? De definitie is circulair en ontbreekt van 1 van de klassen.
    Indien deze een gelijkaardige gebruiksbasis hebben dan kan je dezelfde +URI gebruiken en die toepassen op verschillende klassen. Met een andere AP definition of AP usagenote om het gebruiksverschil te verklaren.
+   > zelfde uri met extra gebruiksnota per gebruik in AP klasse voor verschillende codelijsten.
 
 Waarmerk is een technisch gebeuren: Dan kan eigenlijk niet semantisch bekeken worden, omdat als je de handtekening of een checksum opvraagt dan moet je weten t.o.v. wat dit moet gecontroleerd worden en dat is niet bepaald in het model. Er moet dus uitgegaan worden dat de technische data exchange methode dit aspect opvangt en dat de data dus WAAR is om dat je het aan het processen bent.
 Je kan enkel wel inhoudelijke aspecten in een procedure meegeven: namelijk bv. bekrachtigd door.
@@ -43,7 +44,8 @@ eigenschap locatie verwijst naar een locatie
         https://www.w3.org/TR/prov-o/#Location (ISO 19112)
      alternatief (https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0/#Location) locn:Location = dcterms:Location 
 
-generieke relatie lcon:location zou kunnen gebruikt worden voor eigenschap locatie
+generieke relatie lcon:location zou kunnen gebruikt worden voor eigenschap locatie
+
 
 
 In AP is er een connector tussen klasse Zaak en Dossier in de UML diagramma, maar die heeft geen label > Mag dit weg?
