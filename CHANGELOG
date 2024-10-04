@@ -68,3 +68,7 @@ herstart van creatie vocabularium op basis van versie AP datum 3 okt 2024
     2. URI Document is niet generiek:Document, maar URI: foaf:Document
     3. vraag tijdsbestek == period of time == duration e.g.  	http://purl.org/dc/terms/extent
     4. herpositioneer juridische kwalificatie. => aanpassing AP nodig
+    5. eigenschap document verwijst naar een andere klasse in een andere package ipv. naar de versie op het diagramma. 
+    6. eigenschap vindplaats gemapt op externe URI prov:atLocation
+
+
