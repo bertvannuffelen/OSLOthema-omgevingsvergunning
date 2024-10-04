@@ -57,4 +57,14 @@ eigenschap: aanwendingstermijn is een redefine van een eigenschap die niet voork
 
 voeg expliciete link toe van Inhoud en Rechtshandeling naar Juridisch Werk (ipv visualisatie aid)
 
+--------------
+herstart van creatie vocabularium op basis van versie AP datum 3 okt 2024
 
+1. copy gemaakt
+2. specifieke config gemaakt
+3. aanpassingen:
+    1. redefined verantwoordelijke verwijderd in alle subclassen van Rechtshandeling.
+         => in AP is dit nog niet correct
+    2. URI Document is niet generiek:Document, maar URI: foaf:Document
+    3. vraag tijdsbestek == period of time == duration e.g.  	http://purl.org/dc/terms/extent
+    4. herpositioneer juridische kwalificatie. => aanpassing AP nodig
