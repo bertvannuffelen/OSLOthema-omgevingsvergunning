@@ -71,4 +71,7 @@ herstart van creatie vocabularium op basis van versie AP datum 3 okt 2024
     5. eigenschap document verwijst naar een andere klasse in een andere package ipv. naar de versie op het diagramma. 
     6. eigenschap vindplaats gemapt op externe URI prov:atLocation
 
+7. een bevoegde overheid van een procedure stap en een publieke organisatie van een procedure zijn gelijkaardige eigenschappen maar op verschillende niveaus. 
+   Misschien kan deze eigenschappen nog iets helderder geformuleerd worden. 
 
+ 
